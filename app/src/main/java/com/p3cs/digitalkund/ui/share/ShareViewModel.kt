@@ -1,13 +1,13 @@
-package com.p3csdigitalkund.ui.send
+package com.p3cs.digitalkund.ui.share
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class SendViewModel : ViewModel() {
+class ShareViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is send Fragment"
+        value = "This is share Fragment"
     }
     val text: LiveData<String> = _text
 }

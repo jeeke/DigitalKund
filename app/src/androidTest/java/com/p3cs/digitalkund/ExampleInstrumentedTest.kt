@@ -1,4 +1,4 @@
-package com.p3csdigitalkund
+package com.p3cs.digitalkund
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

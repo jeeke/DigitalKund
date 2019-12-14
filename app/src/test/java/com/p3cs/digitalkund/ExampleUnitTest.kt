@@ -1,4 +1,4 @@
-package com.p3csdigitalkund
+package com.p3cs.digitalkund
 
 import org.junit.Test
 

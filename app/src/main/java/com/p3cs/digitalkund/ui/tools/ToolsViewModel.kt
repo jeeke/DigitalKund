@@ -1,4 +1,4 @@
-package com.p3csdigitalkund.ui.tools
+package com.p3cs.digitalkund.ui.tools
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
