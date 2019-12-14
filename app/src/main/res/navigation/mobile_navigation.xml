@@ -10,34 +10,19 @@
         android:name="com.p3cs.digitalkund.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
-
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.p3cs.digitalkund.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
+        android:id="@+id/nav_saved"
+        android:name="com.p3cs.digitalkund.ui.prevPatents.SavedFragment"
+        android:label="saved_fragment"
+        tools:layout="@layout/saved_fragment" />
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.p3cs.digitalkund.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
-
+        android:id="@+id/nav_drafts"
+        android:name="com.p3cs.digitalkund.ui.prevPatents.DraftsFragment"
+        android:label="drafts_fragment"
+        tools:layout="@layout/drafts_fragment" />
     <fragment
-        android:id="@+id/nav_tools"
-        android:name="com.p3cs.digitalkund.ui.tools.ToolsFragment"
-        android:label="@string/menu_tools"
-        tools:layout="@layout/fragment_tools" />
-
-    <fragment
-        android:id="@+id/nav_share"
-        android:name="com.p3cs.digitalkund.ui.share.ShareFragment"
-        android:label="@string/menu_share"
-        tools:layout="@layout/fragment_share" />
-
-    <fragment
-        android:id="@+id/nav_send"
-        android:name="com.p3cs.digitalkund.ui.send.SendFragment"
-        android:label="@string/menu_send"
-        tools:layout="@layout/fragment_send" />
+        android:id="@+id/nav_launched"
+        android:name="com.p3cs.digitalkund.ui.prevPatents.LaunchedFragment"
+        android:label="launched_fragment"
+        tools:layout="@layout/launched_fragment" />
 </navigation>

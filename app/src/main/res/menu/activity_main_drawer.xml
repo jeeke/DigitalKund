@@ -3,45 +3,85 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <item android:title="HOME"
-        android:id="@+id/nav_home"
-        android:icon="@drawable/ic_menu_manage"/>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_saved"
+            android:icon="@drawable/ic_saved"
+            android:title="Saved" />
+        <item
+            android:id="@+id/nav_drafts"
+            android:icon="@drawable/ic_drafts"
+            android:title="Drafts" />
 
-    <item android:title="SAVED"
-        android:id="@+id/nav_share"
-        android:icon="@drawable/ic_menu_manage"/>
+        <item
+            android:id="@+id/nav_launched"
+            android:icon="@drawable/ic_launched"
+            android:title="Launched" />
+    </group>
 
+    <group
+        android:id="@+id/faqs"
+        android:checkableBehavior="single">
 
-    <item android:title="LAUNCHED"
-        android:id="@+id/nav_tools"
-        android:icon="@drawable/ic_menu_manage"/>
+        <item
+            android:id="@+id/nav_whats_new"
+            android:icon="@drawable/ic_whats_new"
+            android:title="Whats New" />
 
-    <item android:title="NOTIFICATIONS"
-        android:id="@+id/nav_send"
-        android:icon="@drawable/ic_menu_manage"/>
+        <item
+            android:id="@+id/nav_file_patents"
+            android:icon="@drawable/ic_file_patents"
+            android:title="How To File Patent" />
 
-    <item android:title="HOW TO FILE A PATENT"
-        android:id="@+id/nav_slideshow"
-        android:icon="@drawable/ic_menu_manage"/>
+        <item
+            android:id="@+id/nav_contact"
+            android:icon="@drawable/ic_contact"
+            android:title="Contact Us" />
 
-    <item android:title="SETTINGS"
-        android:id="@+id/nav_gallery"
-        android:icon="@drawable/ic_menu_manage"/>
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_about"
+            android:title="About Us" />
 
-    <item android:title="WHATS NEW"
-        android:icon="@drawable/ic_menu_manage"/>
+    </group>
 
-    <item android:title="DRAFTS"
-        android:icon="@drawable/ic_menu_manage"/>
+    <group
+        android:id="@+id/prefs"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_notification"
+            android:icon="@drawable/ic_notifications"
+            android:title="Notifications" />
 
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="Settings" />
 
-    <item android:title="CONTACT US"
-        android:icon="@drawable/ic_menu_manage"/>
+        <item
+            android:id="@+id/nav_log_out"
+            android:icon="@drawable/ic_log_out"
+            android:title="Log Out" />
+    </group>
 
-    <item android:title="ABOUT US"
-        android:icon="@drawable/ic_menu_manage"/>
+    <!--    <group android:checkableBehavior="single">-->
+    <!--        <item-->
+    <!--            android:id="@+id/nav_home"-->
+    <!--            android:icon="@drawable/ic_menu_camera"-->
+    <!--            android:title="@string/menu_home" />-->
+    <!--        <item-->
+    <!--            android:id="@+id/nav_gallery"-->
+    <!--            android:icon="@drawable/ic_menu_gallery"-->
+    <!--            android:title="@string/menu_gallery" />-->
+    <!--        <item-->
+    <!--            android:id="@+id/nav_slideshow"-->
+    <!--            android:icon="@drawable/ic_menu_slideshow"-->
+    <!--            android:title="@string/menu_slideshow" />-->
+    <!--        <item-->
+    <!--            android:id="@+id/nav_tools"-->
+    <!--            android:icon="@drawable/ic_menu_manage"-->
+    <!--            android:title="@string/menu_tools" />-->
+    <!--    </group>-->
 
-    <item android:title="LOG OUT"
-        android:icon="@drawable/ic_menu_manage"/>
 
 </menu>
