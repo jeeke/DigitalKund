@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/my_borders"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="80dp">
+
+        <TextView
+            android:id="@+id/textview2"
+            android:layout_marginLeft="20dp"
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="What is your Company Size?"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="51dp"
+            tools:layout_editor_absoluteY="65dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"/>
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text=""
+            android:background="@drawable/data_entry_border"
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_editor_absoluteY="62dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/my_borders"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="190dp">
+
+        <TextView
+            android:id="@+id/textview1"
+            android:layout_marginLeft="20dp"
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="What is your client size?"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="51dp"
+            tools:layout_editor_absoluteY="65dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"/>
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text=""
+            android:background="@drawable/data_entry_border"
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_editor_absoluteY="62dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/my_borders"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="300dp">
+
+        <TextView
+            android:id="@+id/textview3"
+            android:layout_marginLeft="20dp"
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="How much revenue do you generate?"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="51dp"
+            tools:layout_editor_absoluteY="65dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"/>
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text=""
+            android:background="@drawable/data_entry_border"
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_editor_absoluteY="62dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/my_borders"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="410dp">
+
+        <TextView
+            android:id="@+id/textview4"
+            android:layout_marginLeft="20dp"
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose your Industry"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="51dp"
+            tools:layout_editor_absoluteY="65dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"/>
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:layout_marginBottom="10dp"
+            />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_button"
+        android:text="➜"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="582dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
