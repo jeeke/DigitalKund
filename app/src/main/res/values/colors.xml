@@ -4,6 +4,12 @@
     <color name="colorPrimaryDark">#397AFF</color>
     <color name="colorAccent">#7EB6FF</color>
     <color name="colorSecondary">#68728B</color>
-    <color name="colorSecondar">#80324264</color>
+    <color name="colorText">#ea68728B</color>
+
+    <color name="blue1">#7EB6FF</color>
+    <color name="blue2">#397AFF</color>
+    <color name="gmail">#d0422a</color>
+    <color name="facebook">#3c5a9a</color>
+    <color name="facebook2">#315196</color>
 
 </resources>
