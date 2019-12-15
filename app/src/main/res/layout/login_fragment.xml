@@ -93,7 +93,7 @@
 
                 <EditText
                     android:id="@+id/password"
-                    android:text="@={viewmodel.email}"
+                    android:text="@={viewmodel.password}"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:drawableStart="@drawable/ic_lock"
