@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.p3cs.digitalkund.ui.auth.SignupDetailFragment">
+    tools:context="com.p3cs.digitalkund.ui.auth.SignupFragment">
 
     <TextView
         android:id="@+id/textView36"

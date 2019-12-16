@@ -1,9 +1,9 @@
-package com.p3cs.digitalkund.data.repos.mapper.baseMapper
+package com.p3cs.digitalkund.data.repos.baseRepo
 
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
-import com.p3cs.digitalkund.data.repos.baseRepo.RepositoryCallback
+import com.p3cs.digitalkund.data.repos.mapper.baseMapper.ResponseMapper
 
 
 class BaseValueEventListener<Entity, Model>(
@@ -18,6 +18,6 @@ class BaseValueEventListener<Entity, Model>(
     }
 
     override fun onCancelled(databaseError: DatabaseError) {
-        callback.onError(databaseError.toException())
+        callback.onError(databaseError.message)
     }
 }

@@ -22,4 +22,20 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="ButtonStyle">
+        <item name="android:text">Continue</item>
+        <item name="android:layout_marginStart">32dp</item>
+        <item name="android:layout_marginEnd">32dp</item>
+        <item name="android:layout_marginBottom">32dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:background">@drawable/solid_rounded_rectangle</item>
+        <!--<item name="backgroundTint">?colorSecondary</item>-->
+        <item name="android:textColor">#fff</item>
+    </style>
+
+    <style name="EditTextStyle">
+        <item name="android:background">@drawable/stroke_rounded_rectangle</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
 </resources>

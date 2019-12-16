@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.p3cs.digitalkund.data.db.entities.User
 import com.p3cs.digitalkund.databinding.LoginFragmentBinding
@@ -20,7 +19,7 @@ import org.kodein.di.android.x.kodein
 import org.kodein.di.generic.instance
 
 
-class LoginFragment : Fragment() , AuthListener, KodeinAware {
+class LoginFragment : Fragment(), AuthListener, KodeinAware {
 
     companion object {
         fun newInstance() = LoginFragment()
@@ -39,21 +38,19 @@ class LoginFragment : Fragment() , AuthListener, KodeinAware {
         val binding = LoginFragmentBinding.inflate(inflater, container, false)
 //        set variables in Binding
         viewModel = ViewModelProviders.of(this, factory).get(AuthViewModel::class.java)
-        binding.viewmodel = viewModel
+        binding.viewModel = viewModel
         viewModel.authListener = this
         return binding.root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel.getLoggedInUser().observe(this, Observer { user ->
-            if (user != null) {
-                Intent(activity, MainActivity::class.java).also {
-                    it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                    startActivity(it)
-                }
+        viewModel.currentUser()?.let {
+            Intent(activity, MainActivity::class.java).also {
+                it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(it)
             }
-        })
+        }
     }
 
     override fun onStarted() {

@@ -5,8 +5,8 @@ import com.p3cs.digitalkund.data.db.AppDatabase
 import com.p3cs.digitalkund.data.network.MyApi
 import com.p3cs.digitalkund.data.network.NetworkConnectionInterceptor
 import com.p3cs.digitalkund.data.preferences.PreferenceProvider
+import com.p3cs.digitalkund.data.repos.AuthRepository
 import com.p3cs.digitalkund.data.repos.QuotesRepository
-import com.p3cs.digitalkund.data.repos.UserRepository
 import com.p3cs.digitalkund.ui.auth.AuthViewModelFactory
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
@@ -25,10 +25,9 @@ class MyApplication : Application(), KodeinAware {
         bind() from singleton { MyApi(instance()) }
         bind() from singleton { AppDatabase(instance()) }
         bind() from singleton { PreferenceProvider(instance()) }
-        bind() from singleton { UserRepository(instance(), instance()) }
+        bind() from singleton { AuthRepository() }
         bind() from singleton { QuotesRepository(instance(), instance(), instance()) }
         bind() from provider { AuthViewModelFactory(instance()) }
-
 
     }
 

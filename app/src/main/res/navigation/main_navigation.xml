@@ -35,7 +35,7 @@
         android:label="User Selection" />
     <fragment
         android:id="@+id/nav_detail"
-        android:name="com.p3cs.digitalkund.ui.auth.SignupDetailFragment"
+        android:name="com.p3cs.digitalkund.ui.auth.SignupFragment"
         android:label="Details"
         tools:layout="@layout/signup_detail_producer" />
 </navigation>

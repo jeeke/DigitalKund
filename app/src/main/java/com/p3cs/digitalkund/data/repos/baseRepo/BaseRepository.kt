@@ -2,7 +2,6 @@ package com.p3cs.digitalkund.data.repos.baseRepo
 
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import com.p3cs.digitalkund.data.repos.mapper.baseMapper.BaseValueEventListener
 import com.p3cs.digitalkund.data.repos.mapper.baseMapper.ResponseMapper
 
 abstract class BaseRepository<FROM , TO> {
