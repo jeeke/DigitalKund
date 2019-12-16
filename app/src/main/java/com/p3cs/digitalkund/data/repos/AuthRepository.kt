@@ -23,14 +23,14 @@ class AuthRepository {
             }
     }
 
-    private fun continueWithGoogle(
+    fun continueWithGoogle(
         acct: GoogleSignInAccount,
         callback: RepositoryCallback<String>
     ) {
         val credential = GoogleAuthProvider.getCredential(acct.idToken, null)
         FirebaseAuth.getInstance().signInWithCredential(credential)
             .addOnCompleteListener { t ->
-                Log.e("Google Sign in Error",t.exception.toString())
+                Log.e("Google Sign in Error", t.exception.toString())
                 if (t.isSuccessful) callback.onSuccess()
                 else callback.onError("Something went wrong!")
             }

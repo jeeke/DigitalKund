@@ -7,63 +7,69 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
-import com.p3cs.digitalkund.data.db.entities.User
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.common.api.ApiException
+import com.p3cs.digitalkund.R
 import com.p3cs.digitalkund.databinding.LoginFragmentBinding
-import com.p3cs.digitalkund.ui.MainActivity
-import com.p3cs.digitalkund.util.hide
-import com.p3cs.digitalkund.util.show
-import com.p3cs.digitalkund.util.snackbar
 import kotlinx.android.synthetic.main.login_fragment.*
-import org.kodein.di.KodeinAware
-import org.kodein.di.android.x.kodein
-import org.kodein.di.generic.instance
 
 
-class LoginFragment : Fragment(), AuthListener, KodeinAware {
+class LoginFragment : Fragment() {
 
     companion object {
         fun newInstance() = LoginFragment()
     }
 
-    private lateinit var viewModel: AuthViewModel
-
-    override val kodein by kodein()
-    private val factory: AuthViewModelFactory by instance()
+    lateinit var binding: LoginFragmentBinding
+    lateinit var viewModel: AuthViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = LoginFragmentBinding.inflate(inflater, container, false)
-//        set variables in Binding
-        viewModel = ViewModelProviders.of(this, factory).get(AuthViewModel::class.java)
-        binding.viewModel = viewModel
-        viewModel.authListener = this
+        binding = LoginFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
 
+    val RC_SIGN_IN = 9001
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel.currentUser()?.let {
-            Intent(activity, MainActivity::class.java).also {
-                it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                startActivity(it)
+
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken(getString(R.string.default_web_client_id))
+            .requestEmail()
+            .build()
+
+        activity?.let {
+
+            viewModel = ViewModelProviders.of(it).get(AuthViewModel::class.java)
+            binding.viewModel = viewModel
+
+            val mGoogleSignInClient = GoogleSignIn.getClient(it, gso)
+            btn_google.setOnClickListener {
+                startActivityForResult(
+                    mGoogleSignInClient.signInIntent,
+                    RC_SIGN_IN
+                )
             }
         }
+
     }
 
-    override fun onStarted() {
-        progress_bar.show()
-    }
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == RC_SIGN_IN) {
+            val task = GoogleSignIn.getSignedInAccountFromIntent(data)
+//            try {
+                val account = task.getResult(ApiException::class.java)
+                account?.let { viewModel.loginWithGoogle(it) }
+//            } catch (e: ApiException) {
+//                e.printStackTrace()
+//            }
 
-    override fun onSuccess(user: User) {
-        progress_bar.hide()
-    }
-
-    override fun onFailure(message: String) {
-        progress_bar.hide()
-        root.snackbar(message)
+        }
     }
 
 }

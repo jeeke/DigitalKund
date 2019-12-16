@@ -27,8 +27,7 @@ class MyApplication : Application(), KodeinAware {
         bind() from singleton { PreferenceProvider(instance()) }
         bind() from singleton { AuthRepository() }
         bind() from singleton { QuotesRepository(instance(), instance(), instance()) }
-        bind() from provider { AuthViewModelFactory(instance()) }
-
+        bind() from provider { AuthViewModelFactory(instance(),instance()) }
     }
 
 }

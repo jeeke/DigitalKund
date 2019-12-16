@@ -6,30 +6,35 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
-import com.p3cs.digitalkund.R
-import java.util.*
+import com.p3cs.digitalkund.databinding.SignupFragmentBinding
+import org.kodein.di.KodeinAware
+import org.kodein.di.android.x.kodein
+import org.kodein.di.generic.instance
 
-class SignupFragment : Fragment() {
+class SignupFragment : Fragment(),KodeinAware {
+
 
     companion object {
         fun newInstance() = SignupFragment()
     }
 
-    private lateinit var viewModel: SignupDetailViewModel
+    private lateinit var viewModel: AuthViewModel
+
+    override val kodein by kodein()
+    private val factory: AuthViewModelFactory by instance()
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val r : Int = (Date().time % 3).toInt()
-        val res = arrayOf(R.layout.signup_detail_innovator,R.layout.signup_detail_customer,R.layout.signup_detail_producer);
-        return inflater.inflate(res[r], container, false)
+        val binding = SignupFragmentBinding.inflate(inflater, container, false)
+//        set variables in Binding
+        viewModel = ViewModelProviders.of(this, factory).get(AuthViewModel::class.java)
+        binding.viewModel = viewModel
+//        viewModel.authListener = this
+        return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(SignupDetailViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
 
 }
