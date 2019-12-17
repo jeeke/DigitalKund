@@ -7,35 +7,30 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.p3cs.digitalkund.ui.home.HomeFragment"
+        android:name="co.p3cs.digitalkund.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/nav_saved"
-        android:name="com.p3cs.digitalkund.ui.prevPatents.SavedFragment"
+        android:name="co.p3cs.digitalkund.ui.prevPatents.SavedFragment"
         android:label="Saved"
         tools:layout="@layout/saved_fragment" />
     <fragment
         android:id="@+id/nav_drafts"
-        android:name="com.p3cs.digitalkund.ui.prevPatents.DraftsFragment"
+        android:name="co.p3cs.digitalkund.ui.prevPatents.DraftsFragment"
         android:label="Drafts"
         tools:layout="@layout/drafts_fragment" />
     <fragment
         android:id="@+id/nav_launched"
-        android:name="com.p3cs.digitalkund.ui.prevPatents.LaunchedFragment"
+        android:name="co.p3cs.digitalkund.ui.prevPatents.LaunchedFragment"
         android:label="Launched"
         tools:layout="@layout/launched_fragment" />
     <fragment
-        android:id="@+id/nav_login"
-        android:name="com.p3cs.digitalkund.ui.auth.LoginFragment"
-        android:label="Login" />
-    <fragment
         android:id="@+id/nav_select"
-        android:name="com.p3cs.digitalkund.ui.auth.UserSelectionFragment"
+        android:name="co.p3cs.digitalkund.ui.auth.UserSelectionFragment"
         android:label="User Selection" />
     <fragment
         android:id="@+id/nav_detail"
-        android:name="com.p3cs.digitalkund.ui.auth.SignupFragment"
         android:label="Details"
         tools:layout="@layout/signup_detail_producer" />
 </navigation>

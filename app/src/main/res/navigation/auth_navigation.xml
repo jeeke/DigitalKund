@@ -7,11 +7,11 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.p3cs.digitalkund.ui.auth.LoginFragment"
+        android:name="co.p3cs.digitalkund.ui.auth.LoginFragment"
         android:label="LoginFragment" />
     <fragment
         android:id="@+id/signupFragment"
-        android:name="com.p3cs.digitalkund.ui.auth.SignupFragment"
+        android:name="co.p3cs.digitalkund.ui.auth.SignupFragment"
         android:label="signup_detail_innovator"
         tools:layout="@layout/signup_detail_innovator" />
 </navigation>

@@ -15,7 +15,7 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
-        applicationId "com.p3cs.digitalkund"
+        applicationId "co.p3cs.digitalkund"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
@@ -64,11 +64,12 @@ dependencies {
 
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0'
     implementation 'com.google.firebase:firebase-database:19.2.0'
-    implementation 'com.google.firebase:firebase-auth:19.2.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
+
+    implementation 'com.google.firebase:firebase-auth:19.2.0'
     implementation 'com.google.android.gms:play-services-auth:17.0.0'
 
     //Android Room
@@ -88,7 +89,6 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.6.2'
     implementation 'com.squareup.retrofit2:converter-gson:2.6.2'
 
-    implementation 'com.firebaseui:firebase-ui-auth:4.3.1'
     // Material Navigation View Library
     implementation 'com.shreyaspatil:MaterialNavigationView:1.1'
 

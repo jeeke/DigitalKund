@@ -11,5 +11,7 @@
     <color name="gmail">#d0422a</color>
     <color name="facebook">#3c5a9a</color>
     <color name="facebook2">#315196</color>
+    <color name="tab_background_selected">#fff</color>
+    <color name="tab_background_unselected">#2a68728B</color>
 
 </resources>
